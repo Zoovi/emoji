@@ -1,0 +1,37 @@
+{
+  "name": "@zoovi/emoji",
+  "version": "0.0.1",
+  "description": "Toolkit of emoji-related features created for chat applications",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "generate": "ts-node src/generator/index.ts",
+    "build": "rm -rf dist && npm tsc && npm copy-emoji",
+    "copy-emoji": "xargs -n 1 cp -v src/assets/emoji.json<<<\"dist/esm/assets/ dist/cjs/assets/\"",
+    "tsc": "tsc --project tsconfig.cjs.json & tsc --project tsconfig.esm.json & tsc --project tsconfig.types.json",
+    "test": "jest",
+    "perf": "ts-node src/core/emoji.perf.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/Zoovi/zoovi-emoji/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zoovi/zoovi-emoji"
+  },
+  "devDependencies": {
+    "@types/jest": "27.0.3",
+    "@types/node": "17.0.4",
+    "@types/prettier": "2.4.2",
+    "axios": "0.24.0",
+    "jest": "27.4.5",
+    "prettier": "2.5.1",
+    "ts-jest": "27.1.2",
+    "ts-node": "10.4.0",
+    "typescript": "4.5.4"
+  }
+}
