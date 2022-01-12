@@ -1,6 +1,6 @@
 {
   "name": "@zoovi/emoji",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Toolkit of emoji-related features created for chat applications",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
@@ -15,11 +15,11 @@
     "perf": "ts-node src/core/emoji.perf.ts"
   },
   "bugs": {
-    "url": "https://github.com/Zoovi/zoovi-emoji/issues"
+    "url": "https://github.com/Zoovi/emoji/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zoovi/zoovi-emoji"
+    "url": "https://github.com/Zoovi/emoji"
   },
   "devDependencies": {
     "@types/jest": "27.0.3",
