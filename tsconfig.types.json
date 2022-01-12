@@ -8,5 +8,5 @@
     "declarationDir": "dist/types"
   },
   "include": ["src"],
-  "exclude": ["src/generator", "src/assets", "*.spec.ts", "*.perf.ts"]
+  "exclude": ["src/generator", "**/*.spec.ts", "**/*.perf.ts"]
 }
